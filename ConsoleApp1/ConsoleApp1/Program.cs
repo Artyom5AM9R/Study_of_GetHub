@@ -18,6 +18,10 @@ namespace ConsoleApp1
             {
                 Console.Write((i + 1) + "-й элемент: ");
                 array1[i] = int.Parse(Console.ReadLine());
+                if (array1[i] > 1000)
+                {
+                    array1[i] = 1000;
+                }
             }
             Console.WriteLine();
             Console.WriteLine("Введенный массив имеет следующий вид:");
