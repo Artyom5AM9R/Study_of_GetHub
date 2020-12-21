@@ -6,19 +6,22 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int i, s, a;
+            int i, s, a, n;
             int[] array1;
 
+            Console.WriteLine("Введите размерность одномерного массива -");
+            n = int.Parse(Console.ReadLine());
+
             Console.WriteLine("Введите элементы целочисленного одномерного массива!");
-            array1 = new int[6];
-            for (i = 0; i <= 5; i++)
+            array1 = new int[n];
+            for (i = 0; i < n; i++)
             {
                 Console.Write((i + 1) + "-й элемент: ");
                 array1[i] = int.Parse(Console.ReadLine());
             }
             Console.WriteLine();
             Console.WriteLine("Введенный массив имеет следующий вид:");
-            for (i = 0; i <= 5; i++)
+            for (i = 0; i < n; i++)
             {
                 Console.Write(array1[i] + " ");
             }
@@ -29,7 +32,7 @@ namespace ConsoleApp1
                 Console.Write("Введите число для поиска в массиве: ");
                 s = int.Parse(Console.ReadLine());
                 a = 0;
-                for (i = 0; i <= 5; i++)
+                for (i = 0; i < n; i++)
                 {
                     if (array1[i] == s)
                     {
